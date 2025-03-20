@@ -11,6 +11,7 @@ public class LogoutServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	/*
         HttpSession session = request.getSession(false); // 세션이 없으면 null 반환
         
         if (session != null) {
@@ -18,5 +19,8 @@ public class LogoutServlet extends HttpServlet {
         }
 
         response.sendRedirect(request.getContextPath()); // 메인 페이지로 이동
+        */
+    	request.getSession().invalidate();
+    	response.sendRedirect(request.getContextPath());
     }
 }

@@ -15,7 +15,6 @@ public class LoginServlet extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("path : " + request.getContextPath());
 		Member m = new Member();
 		
 		m.setUserId(request.getParameter("userId"));
@@ -27,6 +26,9 @@ public class LoginServlet extends HttpServlet {
 		if(loginUser != null) {
 			request.getSession().setAttribute("loginUser", loginUser);
 			response.sendRedirect(request.getContextPath());
+		} else {
+			request.setAttribute("errorMsg", "로그인 실패");
+			request.getRequestDispatcher("WEB-INF/views/common/error.jsp").forward(request, response);
 		}
 	}
 
