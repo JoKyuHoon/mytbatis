@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	main화면입니다.
+	<jsp:include page="common/menubar.jsp" />
 </body>
 </html>
