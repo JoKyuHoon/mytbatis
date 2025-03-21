@@ -14,7 +14,6 @@
 	h1 {
 	
 	}
-	
 
 	.login-area a {
 		text-decoration: none;
@@ -36,58 +35,68 @@
 		vertical-align: middle;
 	}
 	
- 	.D_input {
- 	 position: relative;
-	  width: 170px;
-	  padding-left: 50px;
+	
+ 	
+  	.D_input {
+ 	  position: relative;
+	  width: 100%;
+	  margin-bottom:20px;
 	}
 	
 	.input {
-  font-size: 15px;
-  color: #222222;
-  width: 300px;
-  border: none;
-  border-bottom: solid #aaaaaa 1px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  position: relative;
-  background: none;
-  z-index: 5;
-}
+	  font-size: 15px;
+	  color: #222222;
+	  width: 200px;
+	  border: none;
+	  border-bottom: solid #aaaaaa 1px;
+	  padding-bottom: 10px;
+	  padding-left: 10px;
+	  position: relative;
+	  background: none;
+	  z-index: 5;
+	}
 	.input::placeholder { color: #aaaaaa; }
     .input:focus { outline: none; }
 
- span {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0%;  /* right로만 바꿔주면 오 - 왼 */
-  background-color: #666;
-  width: 0;
-  height: 2px;
-  border-radius: 2px;
-  transition: 0.5s;
-}
+ 	span {
+	  display: block;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0%;  /* right로만 바꿔주면 오 - 왼 */
+	  background-color: #666;
+	  width: 0;
+	  height: 2px;
+	  border-radius: 2px;
+	  transition: 0.5s;
+	}
+	
+	label {
+	  position: absolute;
+	  color: #aaa;
+	  left: 10px;
+	  font-size: 18px;
+	  bottom: 8px;
+	  transition: all .2s;
+	}
 
-label {
-  position: absolute;
-  color: #aaa;
-  left: 10px;
-  font-size: 18px;
-  bottom: 8px;
-  transition: all .2s;
-}
+	.input:focus ~ label, .input:valid ~ label {
+	  font-size: 14px;
+	  bottom: 30px;
+	  color: #666;
+	  font-weight: bold;
+	}
 
-.input:focus ~ label, .input:valid ~ label {
-  font-size: 14px;
-  bottom: 20px;
-  color: #666;
-  font-weight: bold;
-}
-
-.input:focus ~ span, .input:valid ~ span {
-  width: 100%;
-}
+	.input:focus ~ span, .input:valid ~ span {
+  	  width: 100%;
+	}  
+	
+	.login {
+		height: 30px;
+		
+		
+	}
+	
+	
 </style>
 </head>
 <body>
@@ -110,16 +119,16 @@ label {
 						<tr>
 							<td>
 								<div class="D_input">
-									<input type="password" name="userPwd" class="input" required>
+									<input type="password" name="userPwd" class="input" id="pw" required>
 									 <label>PW</label> 
 									<span></span>
 								</div>
 							</td>
 						</tr>
-							<td rowspan="1" colspan="3"><input type="submit" class="login" value="로그인" style="height:46px"></td>
+							<td colspan="3"><input type="submit" class="login" value="로그인" ></td>
 						<tr>
 							<td colspan="3" align="center">
-								<a href="">회원가입</a>
+								<a href="enrollForm.me">회원가입</a>
 								<a href="">아이디/비밀번호찾기</a>
 							</td>
 						</tr>
@@ -144,7 +153,7 @@ label {
 	<div class="nav-area" align="center">
 		<div class="menu">HOME</div>
 		<div class="menu">공지사항</div>
-		<div class="menu" onclick="">게시판</div>
+		<div class="menu" onclick="location.href='list.bo?nowPage=1'">게시판</div>
 		<div class="menu">ETC</div>
 	</div>
 </body>

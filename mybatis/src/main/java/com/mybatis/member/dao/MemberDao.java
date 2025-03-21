@@ -12,4 +12,14 @@ public class MemberDao {
 		return sqlSession.selectOne("memberMapper.loginMemebr", m);
 	}
 
+	public int checkId(SqlSession sqlSession, String userId) {
+		return sqlSession.selectOne("memberMapper.checkId", userId);
+	}
+
+	public int insertMember(SqlSession sqlSession, Member m) {
+		return sqlSession.insert("memberMapper.insertMember", m);
+	}
+	
+	
+
 }
