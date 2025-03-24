@@ -1,14 +1,14 @@
 package com.mybatis.member.controller;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import com.mybatis.member.service.MemberServiceImpl;
 import com.mybatis.member.vo.Member;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class MemberInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

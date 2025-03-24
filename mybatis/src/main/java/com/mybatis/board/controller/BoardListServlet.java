@@ -23,7 +23,7 @@ public class BoardListServlet extends HttpServlet {
 		 numPerPage :   현재 페이지에 보여줄 게시글의 최대갯수
 		 pageperBlock : 페이지 하단에 보여질 페이징바의 페이지 최대갯수
 		
-		// 위의 4개를 가지고 값을 구함
+		 // 위의 4개를 가지고 값을 구함
 		 totalPage : 가장 마지막 페이지(총 페이지 수)
 		 startPage : 하단에 페이징바의 시작 페이지
 		 endPage : 하단에 페이징바의 끝 페이지

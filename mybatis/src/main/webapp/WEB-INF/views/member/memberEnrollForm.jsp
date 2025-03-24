@@ -14,7 +14,7 @@
 	function findAddr() {
 	    new daum.Postcode({
 	        oncomplete: function(data) {
-	            let roadAddr = data.roadAddress;  // 도로명 주소
+	            let roadAddr = data.roadAddress;    // 도로명 주소
 	            let jibunAddr = data.jibunAddress;	// 지번 주소
 	            let extraAddr = '';					// 동이나 빌딩명을 넣을 변수
 
